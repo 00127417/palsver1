@@ -35,7 +35,7 @@ router.get('/', function (req, res) {
 });
 
 router.post('/',upload,function(req,res){
-    
+   console.log('por aqui¿¿¿¿¿¿¿¿¿¿',req.body.archivo);
    
     var data = new Imagen({
         post: req.body.post,

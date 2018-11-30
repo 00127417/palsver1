@@ -36,6 +36,8 @@ let app = {
                 .then(data => {
                     //console.log(data);
                     form.post.value="";
+                    form.archivo.vale=undefined;
+                    form.title.vale="";
                     loadContent();
                 });
         });

@@ -30,7 +30,8 @@ router.post('/', function (req, res) {
         }
         res.send({
             message: "saved",
-            success: true
+            success: true,
+            
         });
         /*
             let idUser = window.sessionStorage.NOMBRE
