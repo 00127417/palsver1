@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link.icon-p(rel='shortcut icon', href='/img/avatar.ico')
+    title Signup
+  body.signup
+    header.ini
+      h3 Signup to Pals
+    .signup-box
+      span.avatar
+      h1 Sign up Here
+      div=err
+      form(method='POST', action='/users/signup')
+        label(for='name') Name
+        input(type='text', placeholder='John', name='name')
+        label(for='lastName') LastName
+        input(type='text', placeholder='Conor', name='lastName')
+        label(for='username') Username
+        input(type='text', placeholder='Enter Username', name='username')
+        label(for='email') Email
+        input(type='email', placeholder='Enter Email', name='email')
+        label(for='password') Password
+        input(type='password', placeholder='Enter Password', name='password')
+        input(type='submit', value='Sign up')
+        a(href='signin') Have An account?

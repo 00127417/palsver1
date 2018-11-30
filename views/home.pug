@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='assets/css/style.css')
+    link(rel='stylesheet', href='/stylesheets/style.1.css')
+    link(rel='shortcut icon', href='/img/avatar.ico')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.4.2/css/all.css', integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='/stylesheets/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='/stylesheets/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+    script(src='http://code.jquery.com/jquery-latest.js')
+    script(src='/script/search.js')
+    script(src='/script/main.js')
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='/script/materialize.js')
+    script(src='/script/init.js')
+    title Home
+  body.body-home
+    nav.blue-grey(role='navigation')
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href='#')
+          img.responsive-img.navlogo(src='/img/twitter_header_photo_1.png', alt='')
+        ul.right.hide-on-med-and-down
+          li
+            a(href='#')
+              i.material-icons.right loyalty
+              | Topics
+          li
+            a(href='#')
+              i.material-icons.right mode_comment
+              | Q&A
+          li
+            a(href='#')
+              i.material-icons.right subject
+              | What's New?
+          li
+            a(href='#')
+              i.material-icons.right notifications
+              | Notifications
+          li
+            a(href="/users/logout")
+              i.material-icons.right settings
+              | Settings
+        ul#nav-mobile.sidenav
+          li
+            a(href='#')
+              i.material-icons.right loyalty
+              | Topics
+          li
+            a(href='#')
+              i.material-icons.right mode_comment
+              | Q&A
+          li
+            a(href='#')
+              i.material-icons.right subject
+              | What's New?
+          li
+            a(href='#')
+              i.material-icons.right notifications
+              | Notifications
+          li
+            a(href="/users/logout")
+              i.material-icons.right settings
+              | Settings
+        a.sidenav-trigger(href='#', data-target='nav-mobile')
+          i.material-icons menu
+    
+    main.home
+      form.secc-post(method='POST', name='savePost', action='/img',enctype='multipart/form-data')
+        .input-field.col.s6
+            i.material-icons.prefix mode_edit
+            textarea#post.materialize-textarea.white-text(name='post')
+            label(for='post') Post Something!
+            br
+        
+        .btns
+          
+          .file-field.input-field
+            .btn.btn-img
+              span Image
+              input(type='file',name='archivo')
+            .file-path-wrapper
+              input.file-path.validate(type='text', name='title')
+          input#btn-post.waves-effect.waves-light.btn-large.blue-grey(name='btn-post', value='Post', type='submit')
+      section.posts

@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/img/avatar.ico')
+    title Login
+  body.login
+    header.ini
+      h3 Signin to pals
+    .login-box
+      span.avatar
+      h1 Login Here
+      div=err
+      form(method='POST', action='/users/signin')
+        label(for='username') Email
+        input(type='email', placeholder='Enter Email', name='email')
+        label(for='password') Password
+        input(type='password', placeholder='Enter Password', name='password')
+        input(type='submit', value='Log In')
+        a(href='signup') Don't have An account?
